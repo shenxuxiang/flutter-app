@@ -1,0 +1,234 @@
+name: qm_agricultural_machinery_services
+description: "an hui qianmo agricultural machinery services application"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  get: ^4.7.2
+  dio: ^5.8.0+1
+  gaimon: ^1.4.0
+  crypto: ^3.0.6
+  lpinyin: ^2.0.3
+  card_swiper: ^3.0.1
+  vector_math: ^2.1.4
+  easy_refresh: ^3.4.0
+  flutter_dotenv: ^5.2.1
+  json_annotation: ^4.9.0
+  cupertino_icons: ^1.0.8
+  flutter_screenutil: ^5.9.3
+  shared_preferences: ^2.5.3
+  cached_network_image: ^3.4.1
+  flutter_quill: 11.0.0
+  url_launcher: ^6.3.1
+  syncfusion_flutter_datepicker: ^29.1.39
+  image_picker: ^1.1.2
+  flutter_map: ^8.1.1
+  geolocator: 14.0.0
+  latlong2: ^0.9.1
+  permission_handler: 12.0.0+1
+  path_provider: ^2.1.5
+  open_file: ^3.5.10
+  path: ^1.9.1
+  camera: ^0.11.1
+  flutter_image_compress: ^2.4.0
+  image_gallery_saver_plus: ^4.0.1
+  webview_flutter: ^4.13.0
+  omni_datetime_picker: ^2.1.1
+  flutter_background_service: 5.1.0
+  flutter_local_notifications: ^19.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^2.4.15
+  json_serializable: ^6.9.4
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^5.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - .env.dev
+    - .env.prod
+    - assets/json/region_data.json
+    - assets/images/login_logo.png
+    - assets/images/login_bg.png
+    - assets/images/home_bg.png
+    - assets/images/home/ic_home_agricultural_machinery.png
+    - assets/images/home/ic_home_agricultural_machinery_operation.png
+    - assets/images/home/ic_home_agricultural_production.png
+    - assets/images/home/ic_home_agricultural_technology.png
+    - assets/images/home/ic_home_credit.png
+    - assets/images/home/ic_home_expert.png
+    - assets/images/home/ic_home_farm.png
+    - assets/images/home/ic_home_insurance.png
+    - assets/images/home/ic_home_measure.png
+    - assets/images/home/ic_home_plant_diseases.png
+    - assets/images/home/ic_home_plant_protection.png
+    - assets/images/home/ic_home_policy.png
+    - assets/images/home/ic_system_airobat.png
+    - assets/images/service/labor_services.png
+    - assets/images/service/landtransfer.png
+    - assets/images/service/drying.png
+    - assets/images/service/acquisition.png
+    - assets/images/service/logistics.png
+    - assets/images/service/storage.png
+    - assets/images/service/policy_declaration.png
+    - assets/images/service/policy_advice.png
+    - assets/images/technology/knowledge_base.png
+    - assets/images/technology/library.png
+    - assets/images/technology/video.png
+    - assets/images/technology/avatar_1.png
+    - assets/images/technology/avatar_2.png
+    - assets/images/technology/avatar_3.png
+    - assets/images/disabled/acquisition_disable.png
+    - assets/images/disabled/agricultural_machinery_operation_disable.png
+    - assets/images/disabled/answer_library_disable.png
+    - assets/images/disabled/credit_disable.png
+    - assets/images/disabled/drying_disable.png
+    - assets/images/disabled/expert_disable.png
+    - assets/images/disabled/farm_disable.png
+    - assets/images/disabled/insurance_disable.png
+    - assets/images/disabled/landtransfer_disable.png
+    - assets/images/disabled/logistics_disable.png
+    - assets/images/disabled/measure_disable.png
+    - assets/images/disabled/plant_diseases_disable.png
+    - assets/images/disabled/policy_declaration_disable.png
+    - assets/images/disabled/storage_disable.png
+    - assets/images/disabled/video_disable.png
+
+    - assets/images/mine/service_customer.png
+    - assets/images/mine/service_demand.png
+    - assets/images/mine/service_order.png
+    - assets/images/mine/setting_about_us.png
+    - assets/images/mine/setting_check_update.png
+    - assets/images/mine/setting_clean.png
+    - assets/images/mine/setting_location.png
+    - assets/images/mine/setting_logout.png
+    - assets/images/mine/settings_personal_data.png
+    - assets/images/mine/setting_update_record.png
+    - assets/images/mine/service_credit.png
+    - assets/images/mine/service_cup.png
+    - assets/images/mine/service_farm.png
+    - assets/images/mine/service_insurance.png
+    - assets/images/mine/service_question.png
+
+    - assets/images/service/agricultural_machinery/seed.png
+    - assets/images/service/agricultural_machinery/other.png
+    - assets/images/service/agricultural_machinery/chemical_fertilizer.png
+    - assets/images/service/agricultural_machinery/farm_chemical.png
+    - assets/images/map_location.png
+    - assets/images/update_version.png
+    - assets/images/qr_code.png
+    - assets/images/identity_auth/pic_farmer.png
+    - assets/images/identity_auth/pic_agricultural_machinery_operator.png
+    - assets/images/identity_auth/pic_id1.png
+    - assets/images/identity_auth/pic_id2.png
+    - assets/images/identity_auth/pic_id3.png
+    - assets/images/my_farm/bg.png
+    - assets/images/weather/baoxue.png
+    - assets/images/weather/baoyu.png
+    - assets/images/weather/dabaoyu.png
+    - assets/images/weather/daxue.png
+    - assets/images/weather/dayu.png
+    - assets/images/weather/duoyun.png
+    - assets/images/weather/qing.png
+    - assets/images/weather/shachen.png
+    - assets/images/weather/wu.png
+    - assets/images/weather/xiaoxue.png
+    - assets/images/weather/xiaoyu.png
+    - assets/images/weather/yangsha.png
+    - assets/images/weather/yin.png
+    - assets/images/weather/yujiaxue.png
+    - assets/images/weather/zhongxue.png
+    - assets/images/weather/zhongyu.png
+    - assets/images/weather/night.png
+    - assets/images/weather/leizhengyu.png
+    - assets/images/my_farm/menus/agricultural_records.png
+    - assets/images/my_farm/menus/farm_setup.png
+    - assets/images/my_farm/menus/farm_weather.png
+    - assets/images/my_farm/menus/field_patrol_records.png
+    - assets/images/my_farm/menus/iot_devices.png
+    - assets/images/my_farm/menus/measure_land.png
+    - assets/images/my_farm/menus/product_traceability.png
+    - assets/images/my_farm/menus/remote_sensing_monitoring.png
+    - assets/images/default_avatar.png
+
+    - assets/images/measure_land/start.png
+    - assets/images/measure_land/pause.png
+
+
+
+    # An image asset can refer to one or more resolution-specific "variants", see
+    # https://flutter.dev/to/resolution-aware-images
+
+    # For details regarding adding assets from package dependencies, see
+    # https://flutter.dev/to/asset-from-package
+
+    # To add custom fonts to your application, add a fonts section here,
+    # in this "flutter" section. Each entry in this list should have a
+    # "family" key with the font family name, and a "fonts" key with a
+    # list giving the asset and other descriptors for the font. For
+    # example:
+  fonts:
+    - family: SiYuan
+      fonts:
+        - asset: assets/fonts/SourceHanSansCN-Bold.otf
+          weight: 700
+        - asset: assets/fonts/SourceHanSansCN-Regular.otf
+          weight: 500
+
+    - family: QmIcon
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
