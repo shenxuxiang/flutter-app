@@ -15,7 +15,6 @@ import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter/material.dart' show DefaultAssetBundle, debugPrint;
 import 'package:qm_agricultural_machinery_services/common/global_vars.dart';
-import 'package:qm_agricultural_machinery_services/entity/receiving_address.dart';
 
 /// 生成唯一字符串
 String generateUniqueString() {

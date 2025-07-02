@@ -104,7 +104,7 @@ class _DrawerModalContent extends StatelessWidget {
                 radius: 18.w,
                 ghost: true,
                 text: '重置',
-                type: 'default',
+                type: ButtonMode.normal,
                 onTap: () {
                   if (onReset is Function) onReset!();
                   close();
