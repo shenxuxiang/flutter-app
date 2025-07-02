@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:qm_agricultural_machinery_services/common/qm_icons.dart';
 import 'package:qm_agricultural_machinery_services/components/button_widget.dart';
-import 'package:qm_agricultural_machinery_services/utils/user_tap_feedback.dart';
 
 class DrawerWidget extends StatelessWidget {
   final String title;
@@ -86,7 +85,7 @@ class DrawerWidget extends StatelessWidget {
                       radius: 18.w,
                       ghost: true,
                       text: '重置',
-                      type: 'default',
+                      type: ButtonMode.normal,
                       onTap: () {
                         if (onReset is Function) onReset!();
                         handleClose(context);
